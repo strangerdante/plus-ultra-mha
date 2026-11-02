@@ -86,6 +86,10 @@ Para añadir un personaje, agrega un objeto al array y coloca su imagen en `img/
 Fan page **no oficial**. *Boku no Hero Academia* © Kohei Horikoshi / Shueisha · Bones.
 Las imágenes se usan con fines ilustrativos y pertenecen a sus respectivos autores.
 
+## 📄 Licencia
+
+El código de este proyecto se distribuye bajo la licencia **MIT**: puedes usarlo, modificarlo y compartirlo libremente citando la fuente.
+
 ---
 
 **GO BEYOND — PLUS ULTRA!!!**
