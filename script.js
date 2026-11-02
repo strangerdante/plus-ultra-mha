@@ -241,8 +241,10 @@ function createCard(char, index) {
     }
   });
 
-  // Animación de entrada escalonada
-  setTimeout(() => card.classList.add("visible"), 60 * index);
+  // Animación de entrada escalonada (con red de seguridad: nunca queda invisible)
+  const delay = 60 * index;
+  setTimeout(() => card.classList.add("visible"), delay);
+  setTimeout(() => card.classList.add("visible"), delay + 900);
   return card;
 }
 
@@ -262,9 +264,10 @@ chips.forEach((chip) => {
     document.querySelectorAll(".card").forEach((card) => {
       const show = filter === "all" || card.dataset.role === filter;
       card.classList.toggle("hidden", !show);
+      // Al mostrarse de nuevo, garantizamos opacidad total (sin velo ni parpadeos)
       if (show) {
-        card.classList.remove("visible");
-        requestAnimationFrame(() => card.classList.add("visible"));
+        card.classList.add("visible");
+        card.style.opacity = "1";
       }
     });
   });
@@ -384,4 +387,10 @@ document.querySelectorAll(".quirk-card, .academy-card, .section-head").forEach((
   el.style.transform = "translateY(24px)";
   el.style.transition = "opacity 0.7s ease, transform 0.7s cubic-bezier(0.2,0.8,0.3,1)";
   revealObserver.observe(el);
+
+  // Red de seguridad: si el observer no dispara, el bloque se muestra igualmente
+  setTimeout(() => {
+    el.style.opacity = "1";
+    el.style.transform = "translateY(0)";
+  }, 2000);
 });
