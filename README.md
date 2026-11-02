@@ -29,6 +29,11 @@ plus-ultra-mha/
 └── img/            # Retratos de los personajes (.webp)
 ```
 
+## 🧩 Requisitos
+
+- Un navegador moderno (Chrome, Firefox, Edge o Safari en versiones recientes).
+- Opcional: Python 3 o Node.js si prefieres servir el sitio con un servidor local.
+
 ## 🚀 Cómo ejecutarlo
 
 No requiere instalación ni compilación. Basta con abrir `index.html` en el navegador.
