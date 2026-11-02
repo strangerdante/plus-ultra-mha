@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PLUS ULTRA — Boku no Hero Academia</title>
+  <meta name="description" content="Galería interactiva de los héroes y villanos de Boku no Hero Academia (My Hero Academia)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:wght@300;400;600;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- deploy: 2026-11-02 -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💥</text></svg>" />
+</head>
+<body>
+  <div class="comic-bg" aria-hidden="true"></div>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <a href="#top" class="brand">
+      <span class="brand-mark">MHA</span>
+      <span class="brand-text">PLUS <em>ULTRA</em></span>
+    </a>
+    <nav class="nav-links" aria-label="Navegación principal">
+      <a href="#heroes">Héroes</a>
+      <a href="#villanos">Villanos</a>
+      <a href="#quirk">Quirks</a>
+      <a href="#clases">Academia</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ============ HERO / PORTADA ============ -->
+  <section class="hero" id="top">
+    <div class="hero-speedlines" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="eyebrow">僕のヒーローアカデミア · Season 7</p>
+      <h1 class="hero-title">
+        <span class="line line-1">BOKU NO</span>
+        <span class="line line-2">HERO</span>
+        <span class="line line-3">ACADEMIA</span>
+      </h1>
+      <p class="hero-sub">
+        En un mundo donde el <strong>80% de la población</strong> posee un <em>Quirk</em>,
+        un chico sin poderes decidió convertirse en el héroe número uno.
+      </p>
+      <div class="hero-actions">
+        <a href="#heroes" class="btn btn-primary">Explorar personajes</a>
+        <a href="#quirk" class="btn btn-ghost">¿Qué es un Quirk?</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b data-count="16">0</b><span>Personajes</span></div>
+        <div class="stat"><b data-count="80">0</b><span>% con Quirk</span></div>
+        <div class="stat"><b data-count="1">0</b><span>Símbolo de la Paz</span></div>
+      </div>
+    </div>
+    <div class="hero-portrait">
+      <div class="portrait-frame">
+        <img src="img/deku.webp" alt="Izuku Midoriya, Deku" />
+      </div>
+      <span class="burst">DEKU</span>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">▼</div>
+  </section>
+
+  <!-- ============ QUIRK ============ -->
+  <section class="quirk-section" id="quirk">
+    <div class="section-head">
+      <h2>¿QUÉ ES UN <span class="hl">QUIRK</span>?</h2>
+      <p>Una singularidad genética. Un superpoder. Y, para muchos, una condena o una promesa.</p>
+    </div>
+    <div class="quirk-grid">
+      <article class="quirk-card">
+        <div class="quirk-icon">🧬</div>
+        <h3>Hereditario</h3>
+        <p>Los Quirks se transmiten genéticamente y pueden combinarse entre generaciones, creando habilidades completamente nuevas.</p>
+      </article>
+      <article class="quirk-card">
+        <div class="quirk-icon">⚡</div>
+        <h3>Clasificación</h3>
+        <p>Se dividen en Emisor, Transformación y Mutación. Cada tipo exige un entrenamiento y un control distintos.</p>
+      </article>
+      <article class="quirk-card">
+        <div class="quirk-icon">⚖️</div>
+        <h3>Regulación</h3>
+        <p>El uso de Quirks en público está prohibido sin licencia. Solo los héroes profesionales pueden actuar legalmente.</p>
+      </article>
+      <article class="quirk-card">
+        <div class="quirk-icon">🔥</div>
+        <h3>One For All</h3>
+        <p>Un Quirk que se acumula y se transfiere. Ocho portadores antes de Izuku Midoriya, el noveno.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ HÉROES ============ -->
+  <section class="roster" id="heroes">
+    <div class="section-head">
+      <h2>HÉROES <span class="hl">CLASE 1-A</span></h2>
+      <p>Los futuros pilares de la sociedad. Selecciona un personaje para ver su ficha completa.</p>
+    </div>
+
+    <div class="filters" role="tablist" aria-label="Filtrar personajes">
+      <button class="chip active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+      <button class="chip" data-filter="hero" role="tab" aria-selected="false">Héroes</button>
+      <button class="chip" data-filter="villain" role="tab" aria-selected="false">Villanos</button>
+      <button class="chip" data-filter="teacher" role="tab" aria-selected="false">Profesores</button>
+    </div>
+
+    <div class="card-grid" id="cardGrid"></div>
+  </section>
+
+  <!-- ============ CLASES / ACADEMIA ============ -->
+  <section class="academy" id="clases">
+    <div class="section-head">
+      <h2>LA <span class="hl">ACADEMIA U.A.</span></h2>
+      <p>La escuela de héroes más prestigiosa de Japón. Cuatro cursos, un solo ideal: Plus Ultra.</p>
+    </div>
+    <div class="academy-grid">
+      <article class="academy-card a1">
+        <span class="tag">Curso 1</span>
+        <h3>Clase 1-A</h3>
+        <p>La clase de Izuku, Bakugo y Todoroki. Marcada por la tragedia y por una voluntad inquebrantable.</p>
+      </article>
+      <article class="academy-card a2">
+        <span class="tag">Curso 1</span>
+        <h3>Clase 1-B</h3>
+        <p>Rivales directos de la 1-A. Liderados por Neito Monoma, con Quirks igual de impresionantes.</p>
+      </article>
+      <article class="academy-card a3">
+        <span class="tag">Curso 3</span>
+        <h3>Los Big Three</h3>
+        <p>Mirio Togata, Nejire Hado y Tamaki Amajiki. La élite absoluta de la academia.</p>
+      </article>
+      <article class="academy-card a4">
+        <span class="tag">Staff</span>
+        <h3>Profesores</h3>
+        <p>All Might, Eraser Head, Present Mic, Midnight y Nezu forman a la próxima generación.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <h2>GO BEYOND</h2>
+    <p class="cta-plus">PLUS ULTRA!!!</p>
+    <p>No importa cuán imposible parezca el sueño: siempre hay un camino para convertirse en héroe.</p>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-brand">PLUS <em>ULTRA</em></div>
+    <p>Fan page no oficial · Boku no Hero Academia © Kohei Horikoshi / Shueisha · Bones</p>
+    <p class="small">Imágenes con fines ilustrativos, obtenidas de la wiki pública de la serie.</p>
+  </footer>
+
+  <!-- ============ MODAL ============ -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalName">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" data-close aria-label="Cerrar">✕</button>
+      <div class="modal-media">
+        <img id="modalImg" src="" alt="" />
+        <span class="modal-rank" id="modalRank"></span>
+      </div>
+      <div class="modal-body">
+        <p class="modal-alias" id="modalAlias"></p>
+        <h3 id="modalName"></h3>
+        <div class="modal-meta">
+          <span class="badge" id="modalRole"></span>
+          <span class="badge badge-quirk" id="modalQuirk"></span>
+        </div>
+        <p class="modal-desc" id="modalDesc"></p>
+        <div class="power-bars" id="powerBars"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
