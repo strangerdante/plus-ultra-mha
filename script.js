@@ -207,6 +207,18 @@ const CHARACTERS = [
     img: "img/mirio.webp",
     desc: "Atraviesa la materia a voluntad, volviéndose intangible. Su Quirk es engañosamente simple: dominarlo exige un dominio absoluto del propio cuerpo. Sonriente, humilde y con un heroísmo que no depende de tener poderes, es el orgullo de la Academia U.A.",
     stats: { Poder: 88, Velocidad: 86, Técnica: 96, Intelecto: 90, Resistencia: 84 }
+  },
+  {
+    id: "nejire",
+    name: "Nejire Hado",
+    alias: "Nejire Chan",
+    role: "hero",
+    roleLabel: "Heroína · Big Three",
+    rank: "Big Three · Fuerza de choque",
+    quirk: "Onda de Choque",
+    img: "img/nejire.webp",
+    desc: "Convierte su propia energía vital en ondas espirales capaces de perforar el suelo o derribar a un enemigo a distancia. Curiosa hasta el extremo y con una energía inagotable, es la integrante más imprevisible de los Big Three.",
+    stats: { Poder: 90, Velocidad: 80, Técnica: 84, Intelecto: 82, Resistencia: 78 }
   }
 ];
 
