@@ -208,7 +208,7 @@ const navLinks = document.querySelector(".nav-links");
 
 /* ---------- Render de tarjetas ---------- */
 function roleClass(role) {
-  return role === "villain" ? "villain" : role === "teacher" ? "teacher" : "hero";
+  return role === "villain" ? "rank-villain" : role === "teacher" ? "rank-teacher" : "rank-hero";
 }
 
 function createCard(char, index) {
